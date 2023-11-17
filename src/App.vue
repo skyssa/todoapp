@@ -6,7 +6,7 @@
       <div class="actions">
         <form @submit="addTask">
           <input class="task-input" type="text" placeholder="Add Task" v-model="task" required>
-          <button class="add-task-button" type="submit">Add</button>
+          <button class="add-task-button" type="submit">Add</button><!--  v-on:click.prevent="post" -->
         </form>
         <input class="search-input" type="text" placeholder="Search task" v-model="searchQuery">
       </div>
@@ -47,6 +47,13 @@ export default {
       this.task=''
 
     },
+  // post:function(){
+  //   this.$http.post('https://todoapp-15740-default-rtdb.firebaseio.com/posts.json',{
+
+  //   })
+  // }
+
+
     clearAllTasks() {
       this.todos = []; 
     },
